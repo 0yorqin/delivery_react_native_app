@@ -6,6 +6,8 @@ import useAppwrite from "@/lib/useAppwrite";
 import { useLocalSearchParams } from "expo-router";
 import CartButton from "@/components/CartButton";
 import cn from "clsx";
+import { MenuItem } from "@/type";
+import MenuCard from "@/components/MenuCard";
 
 const Search = () => {
   const { category, query } = useLocalSearchParams<{
@@ -42,7 +44,7 @@ const Search = () => {
                 !isFirstRightColItem ? "mt-10" : "mt-0"
               )}
             >
-              <Text>Menu Card</Text>
+              <MenuCard item={item as MenuItem} />
             </View>
           );
         }}

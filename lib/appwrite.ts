@@ -13,7 +13,12 @@ export const appwriteConfig = {
   platform: "com.mixburger.deliveryapp",
   projectID: process.env.EXPO_PUBLIC_APPWRITE_PROJECT_ID!,
   databaseId: "6891acb20022f7648a0c",
+  bucketId: "689476c7002d54879286",
   userCollectionId: "6891accd0023ae215f42",
+  categoriesCollectionId: "68947389003cf4c8e19a",
+  menuCollectionId: "689473f2003634964078",
+  customizationsCollectionId: "6894754d0038ada9e48a",
+  menuCustomizationsCollectionId: "689475ec0014e21a89d7",
 };
 
 export const client = new Client();

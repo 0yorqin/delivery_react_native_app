@@ -8,6 +8,8 @@ import CartButton from "@/components/CartButton";
 import cn from "clsx";
 import { MenuItem } from "@/type";
 import MenuCard from "@/components/MenuCard";
+import SearchBar from "@/components/SearchBar";
+import Filter from "@/components/Filter";
 
 const Search = () => {
   const { category, query } = useLocalSearchParams<{
@@ -44,7 +46,7 @@ const Search = () => {
                 !isFirstRightColItem ? "mt-10" : "mt-0"
               )}
             >
-              <MenuCard item={item as MenuItem} />
+              <MenuCard item={item as unknown as MenuItem} />
             </View>
           );
         }}
@@ -68,9 +70,9 @@ const Search = () => {
               <CartButton />
             </View>
 
-            <Text>Search Input</Text>
+            <SearchBar />
 
-            <Text>Filter</Text>
+            <Filter categories={categories!} />
           </View>
         )}
         ListEmptyComponent={() => !loading && <Text>No results found</Text>}
